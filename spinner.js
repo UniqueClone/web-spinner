@@ -121,10 +121,15 @@ document.getElementById("optionsForm").addEventListener("submit", (event) => {
     event.preventDefault();
     const input = document.getElementById("optionInput");
     const option = input.value.trim();
-    if (option) {
+    if (option && !(option.length > 21)) {
+        // Check if option is not empty and less than 21 characters
         options.push(option);
         input.value = "";
         drawWheel();
+    } else if (option.length > 20) {
+        alert("Option must be less than 20 characters!");
+    } else {
+        alert("Please enter a valid option!");
     }
 });
 
