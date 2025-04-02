@@ -60,7 +60,7 @@ function drawWheel() {
         ctx.save();
         ctx.translate(centerX, centerY);
         ctx.rotate(startAngle + segmentAngle / 2);
-        ctx.textAlign = "center";
+        // ctx.textAlign = "center";
         ctx.fillStyle = "#000";
         ctx.font = `${Math.floor(radius / 10)}px Arial`; // Adjust font size dynamically
         ctx.fillText(option, radius / 2, 10);
@@ -93,14 +93,12 @@ function spinWheel() {
             requestAnimationFrame(animate);
         } else {
             // Final stop
-            rotationAngle = finalRotation % 360;
-
+            // rotationAngle = finalRotation % 360;
             // Calculate winning segment
-            const normalizedAngle = (360 - rotationAngle) % 360; // Ensure angle is positive and normalized
-            const segmentAngle = 360 / options.length;
+            // const normalizedAngle = (360 - rotationAngle) % 360; // Ensure angle is positive and normalized
+            // const segmentAngle = 360 / options.length;
             // const winningIndex =
             //     Math.floor(normalizedAngle / segmentAngle) % options.length;
-
             // // Show result
             // alert(`The winner is: ${options[winningIndex]}!`);
         }
@@ -148,6 +146,18 @@ options.push(
     "Abhishek"
 );
 drawWheel(); // Initial draw
+
+// Randomise colors button
+// when clicked it actually just randomises the order of the options
+document
+    .getElementById("randomiseColorsButton")
+    .addEventListener("click", () => {
+        for (let i = options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [options[i], options[j]] = [options[j], options[i]];
+        }
+        drawWheel(); // Redraw the wheel with new order
+    });
 
 // Reset button to clear options
 document.getElementById("resetButton").addEventListener("click", () => {

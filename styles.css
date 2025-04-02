@@ -71,6 +71,16 @@ button:active {
     background-color: #2e7d32; /* Even darker green on active */
 }
 
+#randomiseColorsButton {
+    background-color: #ff9800; /* Orange color */
+}
+#randomiseColorsButton:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+}
+#randomiseColorsButton:active {
+    background-color: #ef6c00; /* Even darker orange on active */
+}
+
 #resetButton,
 #removeButton {
     background-color: #f44336; /* Red color */
