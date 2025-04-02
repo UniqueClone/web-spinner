@@ -1,0 +1,99 @@
+/* General body styling */
+body {
+    font-family: Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input styling */
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0078d7; /* Blue highlight on focus */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    min-width: 200px;
+}
+
+button:hover {
+    background-color: #005fa3; /* Darker blue on hover */
+}
+
+button:active {
+    background-color: #004080; /* Even darker blue on active */
+}
+
+#spinButton {
+    background-color: #4caf50; /* Green color */
+}
+#spinButton:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+#spinButton:active {
+    background-color: #2e7d32; /* Even darker green on active */
+}
+
+#resetButton,
+#removeButton {
+    background-color: #f44336; /* Red color */
+}
+#resetButton:hover,
+#removeButton:hover {
+    background-color: #c62828; /* Darker red on hover */
+}
+#resetButton:active,
+#removeButton:active {
+    background-color: #b71c1c; /* Even darker red on active */
+}
+
+/* Spinner Canvas */
+canvas {
+    border: 2px solid #000;
+    display: block;
+    margin: 40px auto;
+    min-width: 200px;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
