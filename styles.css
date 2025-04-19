@@ -1,7 +1,9 @@
 /* General body styling */
 body {
-    font-family: Verdana, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Berkeley Mono', monospace;
+    font-size: 16px;
+    background-color: #282c34;
+    color: #61dafb;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,7 +14,7 @@ body {
 }
 
 h1 {
-    color: #333;
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -28,7 +30,8 @@ form {
 input[type="text"] {
     padding: 10px;
     width: 200px;
-    border: 2px solid #ddd;
+    border: 2px solid #61dafb;
+    background-color: #282c34;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s ease-in-out;
@@ -47,7 +50,7 @@ button {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     min-width: 200px;

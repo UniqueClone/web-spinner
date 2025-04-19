@@ -1,7 +1,7 @@
 const canvas = document.getElementById("spinnerCanvas");
 const ctx = canvas.getContext("2d");
 const options = [];
-let rotationAngle = 0; // Current rotation angle of the wheel
+let rotationAngle = Math.random() * 360; // Random initial rotation angle
 
 // Function to resize canvas dynamically
 function resizeCanvas() {
