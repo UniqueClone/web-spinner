@@ -135,16 +135,7 @@ document.getElementById("optionsForm").addEventListener("submit", (event) => {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas(); // Initialize canvas size
 
-// Initial options for demonstration
-options.push(
-    "Dinh",
-    "Eoin",
-    "Bishal",
-    "David",
-    "Beibhinn",
-    "Matthew",
-    "Abhishek"
-);
+// Initial draw of the wheel
 drawWheel(); // Initial draw
 
 // Randomise colors button
